@@ -1,12 +1,12 @@
 package com.jd.learn_spring_framework.game;
 
-public class MarioGame {
+public class SuperContraGame {
     public void up() {
-        System.out.println("Jump");
+        System.out.println("Up");
     }
 
     public void down() {
-        System.out.println("Go into a hole");
+        System.out.println("Sit down");
     }
 
     public void left() {
@@ -14,6 +14,6 @@ public class MarioGame {
     }
 
     public void right() {
-        System.out.println("Accelerate");
+        System.out.println("Shoot bullets");
     }
-}   
+}
