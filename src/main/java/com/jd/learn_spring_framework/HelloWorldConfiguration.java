@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 // Released in JDK 16.
 
 record Person (String name, int age) { };
+record PersonA (String name, int age, Address address) { };
 record Address (String firstLine, String city) { }; 
 
 @Configuration
@@ -27,6 +28,16 @@ public class HelloWorldConfiguration {
     @Bean
     public Person person() {
         return new Person("Joe", 21);
+    }
+
+    @Bean
+    public Person person2MethodCallExample() {
+        return new Person(name(), age());
+    }
+
+    @Bean
+    public PersonA person3ParametersExample(String name, int age, Address address) {
+        return new PersonA(name, age, address);
     }
 
     @Bean
